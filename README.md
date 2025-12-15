@@ -4,7 +4,7 @@
   <!-- PROJECT LOGO (Optional: Replace link with your logo URL or delete) -->
   <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" alt="Logo" width="100" height="100">
 
-  # [Genesis One NL Design]
+  # [Genesis One Natural Language Designer]
 
   <!-- BADGES -->
   <!-- Replace generic badges with your specific tech stack if needed -->
@@ -169,20 +169,7 @@ Unlike standard text-to-image generators, **Genisi One** introduces **Multi-Mode
 | **State Management** | `Redux` / `MobX` | Tracking canvas state across the session. |
 | **Real-Time Sync** | `WebSockets` / `CRDT` | **Operational Transform (OT)** algorithms to manage concurrent multi-user edits. |
 | **AI Orchestrator** | `Python` / `LangChain` | Routes prompts to the appropriate model API (OpenAI, Stability AI, Google). |
-| **Storage** | `AWS S3` / `Azure Blob` | Cloud storage for high-res assets, layer data, and project JSON. |
-
-### Data Flow Diagram
-```mermaid
-graph TD
-    User((User Voice)) -->|Input| Client[Genisi One Canvas]
-    Client -->|WebSocket| Server[Orchestration Server]
-    Server -->|Decision Logic| AI_Router{AI Model Router}
-    AI_Router -->|Background| SD[Stable Diffusion]
-    AI_Router -->|Subject| DALLE[DALL-E 3]
-    SD -->|Image Data| Mixer[Layer Compositor]
-    DALLE -->|Image Data| Mixer
-    Mixer -->|Refined Asset| Client
-    Client -->|Sync| DB[(Cloud Storage)]
+| **Storage** | `AWS S3` / `Azure Blob` | Cloud storage for high-res assets, layer data, and project JSON. 
 
 # Run and deploy your AI Studio app
 
